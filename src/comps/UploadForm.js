@@ -7,7 +7,7 @@ const UploadForm = () => {
 
   const types = ['image/png', 'image/jpeg']
 
-  const handleChange = (e) => {
+  const handleUpload = (e) => {
     let selected = e.target.files[0]
 
     if (selected && types.includes(selected.type)) {
@@ -22,9 +22,10 @@ const UploadForm = () => {
   return (
     <form>
       <label>
-        <input type="file" onChange={handleChange} />
+        <input type="file" onChange={handleUpload} />
         <span>+</span>
       </label>
+      <span>Upload</span>
       <div className="output">
         {error && <div className="error">{error}</div>}
         {file && <div>{file.name}</div>}

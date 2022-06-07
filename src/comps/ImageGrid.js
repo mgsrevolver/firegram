@@ -1,6 +1,7 @@
 import React from 'react'
 import useFirestore from '../hooks/useFirestore'
 import { motion } from 'framer-motion'
+import DeleteButton from './DeleteButton'
 
 const ImageGrid = ({ setSelectedImg }) => {
   const { docs } = useFirestore('images')
@@ -10,6 +11,9 @@ const ImageGrid = ({ setSelectedImg }) => {
       {docs &&
         docs.map((doc) => (
           <>
+            <div class="delete-button">
+              <DeleteButton />
+            </div>
             <motion.div
               className="img-wrap"
               key={doc.id}

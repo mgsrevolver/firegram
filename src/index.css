@@ -11,8 +11,12 @@ body {
   font-family: 'Brush Script MT', cursive;
   color: var(--secondary);
 }
-.App {
-  max-width: 960px;
+.Navigation {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.ImageGrid {
   margin: 0 auto;
 }
 .title h1 {
@@ -94,6 +98,32 @@ label:hover {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.delete-button {
+  position: relative;
+  color: var(--error);
+}
+
+.delete-button .close {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 100;
+  background-color: #fff;
+  padding: 5px 2px 2px;
+  color: var(--error);
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.2;
+  text-align: center;
+  font-size: 22px;
+  line-height: 10px;
+  border-radius: 50%;
+}
+
+.delete-button:hover .close {
+  opacity: 1;
 }
 
 /* modal styles */
